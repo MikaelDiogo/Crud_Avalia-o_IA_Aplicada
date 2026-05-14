@@ -1,0 +1,2 @@
+export const PRODUCT_NAME_MAX_LENGTH = 100;
+export const PRODUCT_CATEGORY_MAX_LENGTH = 50;
