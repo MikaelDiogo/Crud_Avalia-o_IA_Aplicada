@@ -37,6 +37,7 @@ export class CreateProductValidator implements ICreateProductValidator {
       categoria: typeof o.categoria === 'string' ? o.categoria : '',
       disponivel:
         typeof o.disponivel === 'boolean' ? o.disponivel : undefined,
+      imagemUrl: typeof o.imagemUrl === 'string' ? o.imagemUrl : null,
     };
   }
 

@@ -24,6 +24,7 @@ export class TypeORMProdutoRepository implements IProdutoRepository {
       preco: dados.preco,
       categoria: dados.categoria,
       disponivel: dados.disponivel ?? true,
+      imagemUrl: dados.imagemUrl ?? null,
     });
     return this.repository.save(entidade);
   }
@@ -41,6 +42,7 @@ export class TypeORMProdutoRepository implements IProdutoRepository {
     if (dados.preco !== undefined) existente.preco = dados.preco;
     if (dados.categoria !== undefined) existente.categoria = dados.categoria;
     if (dados.disponivel !== undefined) existente.disponivel = dados.disponivel;
+    if (dados.imagemUrl !== undefined) existente.imagemUrl = dados.imagemUrl;
     return this.repository.save(existente);
   }
 

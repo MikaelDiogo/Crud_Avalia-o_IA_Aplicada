@@ -33,6 +33,9 @@ export class Produto {
   @Column({ type: 'varchar', length: 50 })
   categoria!: string;
 
+  @Column({ type: 'text', nullable: true, name: 'imagem_url' })
+  imagemUrl!: string | null;
+
   @Column({ type: 'boolean', default: true, name: 'disponivel' })
   disponivel!: boolean;
 

@@ -6,10 +6,11 @@ export type CriarProdutoInput = {
   preco: number;
   categoria: string;
   disponivel?: boolean;
+  imagemUrl?: string | null;
 };
 
 export type AtualizarProdutoInput = Partial<
-  Pick<CriarProdutoInput, 'nome' | 'descricao' | 'preco' | 'categoria' | 'disponivel'>
+  Pick<CriarProdutoInput, 'nome' | 'descricao' | 'preco' | 'categoria' | 'disponivel' | 'imagemUrl'>
 >;
 
 export interface IProdutoRepository {
