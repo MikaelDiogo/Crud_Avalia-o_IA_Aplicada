@@ -56,6 +56,9 @@ export class UpdateProductValidator implements IUpdateProductValidator {
       }
       dados.disponivel = o.disponivel;
     }
+    if ('imagemUrl' in o) {
+        dados.imagemUrl = typeof o.imagemUrl === 'string' ? o.imagemUrl : null;
+    }
     return dados;
   }
 
